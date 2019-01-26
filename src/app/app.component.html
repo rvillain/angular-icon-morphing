@@ -1,20 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="fab-menu">
+  <ul>
+    <li [ngClass]="{'active': isActive}">
+      <div class="fab-form">
+        coucou
+      </div>
+        <button (click)="isActive = !isActive" class="fab">
+            <aim-icon [active]="isActive" [easing]="easing">
+                <svg width="24" height="24">
+                    <g #startIcon><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></g>
+                    <g #endIcon><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></g>
+                </svg>
+              </aim-icon>
+        </button>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<select id="selEasing" [(ngModel)]="easing"><option value="circ-in">Circ In</option><option value="circ-out">Circ Out</option><option value="circ-in-out">Circ In/Out</option><option value="cubic-in">Cubic In</option><option value="cubic-out">Cubic Out</option><option value="cubic-in-out">Cubic In/Out</option><option value="elastic-in">Elastic In</option><option value="elastic-out">Elastic Out</option><option value="elastic-in-out">Elastic In/Out</option><option value="expo-in">Expo In</option><option value="expo-out">Expo Out</option><option value="expo-in-out">Expo In/Out</option><option value="linear">Linear</option><option value="quad-in">Quad In</option><option value="quad-out">Quad Out</option><option value="quad-in-out">Quad In/Out</option><option value="quart-in">Quart In</option><option value="quart-out">Quart Out</option><option value="quart-in-out">Quart In/Out</option><option value="quint-in">Quint In</option><option value="quint-out">Quint Out</option><option value="quint-in-out">Quint In/Out</option><option value="sine-in">Sine In</option><option value="sine-out">Sine Out</option><option value="sine-in-out">Sine In/Out</option></select>

@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/font-awesome/scss/font-awesome.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/svg-morpheus/compile/minified/svg-morpheus.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -127,6 +130,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "angular-icon-morphing": {
+      "root": "projects/angular-icon-morphing",
+      "sourceRoot": "projects/angular-icon-morphing/src",
+      "projectType": "library",
+      "prefix": "aim",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-icon-morphing/tsconfig.lib.json",
+            "project": "projects/angular-icon-morphing/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-icon-morphing/src/test.ts",
+            "tsConfig": "projects/angular-icon-morphing/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-icon-morphing/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-icon-morphing/tsconfig.lib.json",
+              "projects/angular-icon-morphing/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

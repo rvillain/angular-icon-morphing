@@ -1,0 +1,50 @@
+.fab-menu{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    ul{
+        li{
+            list-style: none;
+            background: white;
+            transition: all .3s;
+            border-radius: 50px;
+            box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2);
+            display: flex;
+            .fab-form{
+                transition: all .3s;
+                width: 0px;
+                opacity: 0; 
+                display: flex;
+                align-items: center;
+            }
+            
+            &.active{
+                box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.5);
+                >button{
+                    background: #22BB88;
+                }
+                .fab-form{
+                    width: 300px;
+                    opacity: 1;
+                    padding: 5px 20px;
+                }
+            }
+            >button{
+                z-index: 10;
+                background: #2288BB;
+                color: white;
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+                border: none;
+                transition: all .3s;
+                outline:none;
+                cursor: pointer;
+                svg{
+                    fill: white;
+                }
+            }
+        }
+    }
+
+}
