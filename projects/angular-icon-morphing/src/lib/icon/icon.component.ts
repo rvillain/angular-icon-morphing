@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild, ElementRef, Input, AfterContentInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, ContentChild, ElementRef, Input, AfterContentInit, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 
 declare var SVGMorpheus: any;
 
@@ -10,15 +10,20 @@ declare var SVGMorpheus: any;
 export class IconComponent implements OnInit, AfterContentInit, OnChanges {
 
   constructor() { }
-  
+  // Icons children
   @ContentChild('startIcon') startIcon: ElementRef;
   @ContentChild('endIcon') endIcon: ElementRef;
+
+  @ViewChild('iconContainer') iconContainer: ElementRef;
 
   @Input() active: boolean;
   @Input() easing = 'linear';
   @Input() duration = 250;
-  
+
+  // morpheus variable
   public svgMorpheus: any;
+
+  public containerId = 'ic-' + Math.floor(Math.random() * 1000000);
 
   ngOnInit() {
   }
@@ -26,12 +31,12 @@ export class IconComponent implements OnInit, AfterContentInit, OnChanges {
   ngAfterContentInit() {
     this.startIcon.nativeElement.id = 'startIcon';
     this.endIcon.nativeElement.id = 'endIcon';
-    this.svgMorpheus = new SVGMorpheus('#icons-container svg', {iconId: 'startIcon'});
+    this.iconContainer.nativeElement.id = this.containerId;
+    this.svgMorpheus = new SVGMorpheus('#' + this.containerId + ' svg', {iconId: 'startIcon'});
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
-    if(changes.active){
+    if (changes.active) {
       this.doTransition();
     }
 

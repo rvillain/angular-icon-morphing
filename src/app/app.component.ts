@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-icon-morphing-demo';
   public isActive = false;
+  public duration = 250;
   public easing = 'quart-in-out';
   constructor() {
   }

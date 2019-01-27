@@ -11,7 +11,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "types": ["node_modules/svg-morpheus/compile/minified/svg-morpheus.js"],
+    "types": [],
     "lib": [
       "dom",
       "es2018"

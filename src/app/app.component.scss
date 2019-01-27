@@ -1,3 +1,32 @@
+.params-menu{
+    display: flex;
+    align-content: center;
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.3);
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+    background: #2288BB;
+    color: white;
+    h3{
+        margin: 0;
+    }
+    label{
+        margin-left: 25px;
+        margin-right: 5px;
+    }
+    input, select{
+        border: 1px solid #333;
+        outline: none;
+    }
+    input{
+        padding: 5px;
+    }
+}
+
+.content{
+    padding: 15px;
+}
+
 .fab-menu{
     position: fixed;
     right: 20px;
@@ -8,7 +37,7 @@
             background: white;
             transition: all .3s;
             border-radius: 50px;
-            box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.3);
             display: flex;
             .fab-form{
                 transition: all .3s;
@@ -19,7 +48,7 @@
             }
             
             &.active{
-                box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.4);
                 >button{
                     background: #22BB88;
                 }
@@ -47,4 +76,8 @@
         }
     }
 
+}
+
+.big{
+    zoom: 2;
 }

@@ -85,6 +85,9 @@ aim-icon component can be used with some parameters
 | duration |duration of animation in ms | 250 |
 
 
+
+
+
 ## Built With
 
 * [SVG-Morpheus](https://github.com/alexk111/SVG-Morpheus/) - The JS library used
@@ -93,3 +96,4 @@ aim-icon component can be used with some parameters
 ## Authors
 
 * **Rémy Villain** - [rvillain](https://github.com/rvillain)
+
