@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/angular-icon-morphing-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -56,6 +57,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -148,6 +153,11 @@
           "options": {
             "tsConfig": "projects/angular-icon-morphing/tsconfig.lib.json",
             "project": "projects/angular-icon-morphing/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-icon-morphing/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -173,5 +183,8 @@
       }
     }
   },
-  "defaultProject": "angular-icon-morphing-demo"
+  "defaultProject": "angular-icon-morphing-demo",
+  "cli": {
+    "analytics": false
+  }
 }
