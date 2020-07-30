@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AngularIconMorphingModule } from '../../projects/angular-icon-morphing/src/lib/angular-icon-morphing.module';
 import { AppComponent } from './app.component';
-import { AngularIconMorphingModule } from 'angular-icon-morphing';
+
 
 @NgModule({
   declarations: [
