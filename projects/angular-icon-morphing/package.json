@@ -5,17 +5,18 @@
   "repository": "https://github.com/rvillain/angular-icon-morphing",
   "keywords": ["Angular", "Icon", "Morphing", "SVG", "Morpheus", "Animation"],
   "license": "ISC",
-  "author": { 
-    "name" : "Rémy Villain", 
-    "email" : "remy.villain@apollossc.com", 
+  "author": {
+    "name" : "Rémy Villain",
+    "email" : "remy.villain@apollossc.com",
     "url" : "https://github.com/rvillain"
   },
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
     "svg-morpheus": "0.3.0"
-  },
+  }
+,
   "dependencies": {
     "tslib": "^2.0.0"
   }
-} 
+}
