@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild, ElementRef, Input, AfterContentInit, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 declare var SVGMorpheus: any;
 
@@ -14,7 +14,7 @@ export class IconComponent implements OnInit, AfterContentInit, OnChanges {
   @ContentChild('startIcon') startIcon: ElementRef;
   @ContentChild('endIcon') endIcon: ElementRef;
 
-  @ViewChild('iconContainer') iconContainer: ElementRef;
+  @ViewChild('iconContainer', {static: true}) iconContainer: ElementRef;
 
   @Input() active: boolean;
   @Input() easing = 'linear';

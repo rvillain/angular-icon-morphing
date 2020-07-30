@@ -173,5 +173,8 @@
       }
     }
   },
-  "defaultProject": "angular-icon-morphing-demo"
+  "defaultProject": "angular-icon-morphing-demo",
+  "cli": {
+    "analytics": false
+  }
 }
